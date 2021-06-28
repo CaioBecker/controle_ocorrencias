@@ -10,6 +10,7 @@
 </head>
 <body>
 <!--cabeçalho-->
-<header class="cabecalho">
-    <h1>TCC</h1>
+<header class="cabecalho titulo">
+    <a href="index.php" style="color:white;"><h1>Controle de Ocorrencias</h1></a>
 </header>
+<body>
