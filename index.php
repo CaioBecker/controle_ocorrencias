@@ -1,8 +1,10 @@
     <?php
         include 'cabecalho.php';
+        include 'conexao.php';
     ?>
         <div class="titulo">
         <h1>Menu</h1>
+
         </div>
         </br>
         <div class="row sub_titulo">
