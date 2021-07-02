@@ -10,17 +10,18 @@ $var_vl_multa = $_POST['vl_multa'];
 $var_convercao_regimento = $_POST['hidden_conv_regi'];
 $var_artigo = $_POST['artigo'];
 
-if ($var_box_convercao = ''){
-    $var_convercao_regimento = 'r';
-}else{
-    $var_convercao_regimento = 'c';
-}
+//if ($var_box_convercao = 'false'){
+//    $var_convercao_regimento = 'r';
+//}
+//if ($var_box_){ 
+//$var_convercao_regimento = 'c';
+//}
 
-if ($var_box_advertencia = ''){
-    $var_advertencia_multa = 'm';
-}else{
-    $var_advertencia_multa = 'a';
-}
+//if ($var_box_advertencia = 'false'){
+//    $var_advertencia_multa = 'm';
+//}else{
+//    $var_advertencia_multa = 'a';
+//}
 
 $insert_advertencias_multas = "INSERT INTO advertencias_multas
                     SELECT 
