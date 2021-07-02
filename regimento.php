@@ -8,10 +8,13 @@ Consulta de Regimento
 </div>
 </br>
     <div class="row">
+    <form method="post" action="sql_regimento.php">
         <div class="col-md-3">
             Artigo:
-            <input class="form-control" type="number" name="n_artigo" required>  
+            <input class="form-control" type="number" name="n_artigo" required>
+            <input class="btn_azul btn" type="submit" name="btn_busca" value="buscar">  
         </div>
+    </form>    
         </br>
         <div class="col-md-4">
             Paragrafo:
@@ -31,4 +34,5 @@ Consulta de Regimento
 
 <?php 
 include 'rodape.php';
+include 'sql_regimento.php';
 ?>
