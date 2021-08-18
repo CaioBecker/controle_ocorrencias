@@ -29,19 +29,17 @@ Cadastro de Ocorrencias
     <div class="row">
         </br>
         <div class="col-md-3">
-            Advertencia<input type="checkbox" name="ckbox_advertencia" id="id_advertencia" onblur="hidden_adv()">  
             Multa<input type="checkbox" name="ckbox_multa" id="id_multa" onblur="hidden_multa()">
-            <input type="hidden" name="hidden_adv_multa" id="id_hidden1">
         </div>
         </br>
         <div class="col-md-3">
             valor da multa:
-            <input class="form-control" type="number" name="vl_multa" required>  
+            <input class="form-control" type="number" id="id_multa_vl" name="vl_multa" disabled>  
         </div>
         </br>
         <div class="col-md-3">
-            convenção<input type="checkbox" name="ckbox_convercao" id="id_conv"onblur="hidden_conv()">
-            regimento<input type="checkbox" name="ckbox_regimento" id="id_regi" onblur="hidden_regi()">
+            convenção<input type="checkbox" name="ckbox_convercao" id="id_conv">
+            regimento<input type="checkbox" name="ckbox_regimento" id="id_regi">
             <input type="hidden" name="hidden_conv_regi" id="id_hidden2">
         </div>
         </br>
@@ -60,53 +58,16 @@ Cadastro de Ocorrencias
 include 'rodape.php';
 ?>
 <script>
-
-    function hidden_multa(){
-        var advertencia = getElementById(id_advertencia);
+    function hidden_multa (
         var multa = getElementById(id_multa);
-        var hidden = getElementById(id_hidden1).value;
         
-        if(isset (advertencia)){
+        if( multa == 'on' ){
             getElementById(id_hidden1).value = 'multa';
-            (getElementById(id_multa)).checked = false;
-
-        }
-    }
-    function hidden_adv(){
-        var advertencia = getElementById(id_advertencia);
-        var multa = getElementById(id_multa);
-        var hidden = getElementById(id_hidden1).value;
-        
-        if(isset (multa)){
-            getElementById(id_hidden1).value = 'adv';
-            (getElementById(id_advertencia)).checked = false;
+            getElementById(id_multa_vl).display(disabled = 'false')
 
         }
 
-    }
-    function hidden_conv(){
-        var conv = getElementById(id_conv);
-        var regi = getElementById(id_regi);
-        var hidden = getElementById(id_hidden2).value;
-        
-        if(isset (conv)){
-            getElementById(id_hidden2).value = 'c';
-            (getElementById(id_regi)).checked = false;
-
-        }
-
-    }
-    function hidden_regi(){
-        var conv = getElementById(id_conv);
-        var regi = getElementById(id_regi);
-        var hidden = getElementById(id_hidden2).value;
-        
-        if(isset (regi)){
-            getElementById(id_hidden2).value = 'r';
-            (getElementById(id_conv)).checked = false;
-
-        }
-
-    }
+    )
+    
 
 </script>

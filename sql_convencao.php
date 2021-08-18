@@ -2,7 +2,7 @@
 
 include 'conexao.php';
 
-$var_artigo = $_POST['n_artigo'];
+$var_artigo = @$_POST['n_artigo'];
 
 $consulta_convencao = "SELECT * FROM convencao_regimento
                         WHERE  artigo = $var_artigo

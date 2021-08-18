@@ -1,9 +1,16 @@
-<?php
-    include 'style.php';
-    
-?>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><!--Titulo-->
-<head>
+
+<!--CSS-->
+<?php 
+        include 'css/style.php';
+        include 'css/style_mobile.php';
+    ?>
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a3000fd09d.js" crossorigin="anonymous"></script>
+    <!--GRAFICOS CHART JS-->  
+    <script src="js/Chart.js-2.9.4/dist/Chart.js"></script>
+    <head>
     <title>TCC</title>
 </head>
 <body>

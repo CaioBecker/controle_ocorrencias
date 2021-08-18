@@ -5,9 +5,9 @@ include 'conexao.php';
 $var_apartamento = $_POST['n_aptm'];
 $var_dt_ocorrencia = $_POST['dt_ocorrencia'];
 $var_obs_ocorrencia = $_POST['obs_ocorrencia'];
-$var_advertencia_multa = $_POST['hidden_adv_multa'];
-$var_vl_multa = $_POST['vl_multa'];
-$var_convercao_regimento = $_POST['hidden_conv_regi'];
+$var_advertencia_multa = @$_POST['ckbox_multa'];
+$var_vl_multa = @$_POST['vl_multa'];
+$var_convercao_regimento = @$_POST['hidden_conv_regi'];
 $var_artigo = $_POST['artigo'];
 
 //if ($var_box_convercao = 'false'){
@@ -23,6 +23,16 @@ $var_artigo = $_POST['artigo'];
 //    $var_advertencia_multa = 'a';
 //}
 
+if($var_advertencia_multa == 'on') {
+    $var_a_m="m";
+    echo '</br> multa';
+}else{
+    $var_a_m="a";
+    echo '</br> advertencia'; 
+}
+
+
+
 $insert_advertencias_multas = "INSERT INTO advertencias_multas
                     SELECT 
                     '$var_dt_ocorrencia' as data_hora,
@@ -30,7 +40,7 @@ $insert_advertencias_multas = "INSERT INTO advertencias_multas
                     '$var_artigo' as artigo,
                     '$var_apartamento' as numero,
                     '$var_obs_ocorrencia' as relatoOCORRIDO,
-                    '$var_advertencia_multa' as TIPO_ADVERTENCIA_OU_MULTA,
+                    '$var_a_m' as TIPO_ADVERTENCIA_OU_MULTA,
                     '$var_vl_multa' as VALORMULTA
                     FROM dual";
 
@@ -44,7 +54,7 @@ if(!$insert_advertencias_multas){
     
 
 }else{
-    header('location: index.php');
+    //header('location: index.php');
 }
 
 
